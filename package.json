@@ -1,0 +1,30 @@
+{
+  "name": "vvk.loginservice",
+  "version": "1.0.0",
+  "description": "login service for hr project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=development node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishalkulkarni1994/nodeRestAPI.git"
+  },
+  "keywords": [
+    "mongo",
+    "node"
+  ],
+  "author": "Vishal Kulkarni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishalkulkarni1994/nodeRestAPI/issues"
+  },
+  "homepage": "https://github.com/vishalkulkarni1994/nodeRestAPI#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}
