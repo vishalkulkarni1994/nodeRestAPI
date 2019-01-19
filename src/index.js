@@ -1,14 +1,26 @@
 import express from 'express';
+import constants from './config/constants';
+import { database } from './config/database';
+import middleware from './config/middleware';
 
 const app = express();
+middleware(app);
 
-const port = process.env.port || 3000;
+app.get('/', (req, res) => {
+  console.log('in');
+  res.send('hello world');
+})
 
-app.listen(port, err => {
+app.listen(constants.port, err => {
     if (err) {
-        console.log(err);
-        throw err;
+      console.log(err);
+      throw err;
     } else {
-        console.log(' server listening at port ' >> port >> $(process.env.NODE_ENV));
+      database.setupConnection();
+      console.log('yay server listening at port ' + constants.port + ' env ' + constants.env);
     }
+
+// app.get('/', (req, res) => {
+//   res.end('hello');
+// });
 })
