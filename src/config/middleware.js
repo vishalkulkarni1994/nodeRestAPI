@@ -12,6 +12,7 @@ export default app => {
     app.use(helmet());
     app.use(compression());
     app.use(morgan('dev'));
-  app.use(bodyparser.json());
-  app.use(bodyparser.urlencoded({extended: true}));
+    app.use(bodyparser.json());
+    app.use(bodyparser.urlencoded( {extended: true}) );
+    console.log('hiihii');
 }
